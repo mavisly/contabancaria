@@ -8,7 +8,7 @@ public class ContaCorrente extends Conta{
 		super(numero, agencia, tipo, titular, saldo);
 		this.limite = limite;
 	}
-
+	
 	public float getLimite() {
 		return limite;
 	}
@@ -16,19 +16,23 @@ public class ContaCorrente extends Conta{
 	public void setLimite(float limite) {
 		this.limite = limite;
 	}
-	public boolean sacar(float valor) {
-		if (this.getSaldo() + this.getLimite() < valor) {
-			System.out.println("\n Saldo insuficiente!");
+
+	@Override
+	public boolean sacar(float valor) { 
+		
+		if(this.getSaldo() + this.getLimite() < valor) {
+			System.out.println("\n Saldo Insuficiente!");
 			return false;
 		}
+		
 		this.setSaldo(this.getSaldo() - valor);
-		return false;
+		return true;
+		
 	}
 	
 	public void visualizar() {
 		super.visualizar();
-		System.out.println("Limite de crédito: "+this.limite);
+		System.out.println("Limite de Crédito: " + this.limite);
 	}
-	
-	
+    
 }
