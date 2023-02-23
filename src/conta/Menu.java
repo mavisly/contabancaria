@@ -8,13 +8,6 @@ public class Menu {
 
 	public static void main(String[] args) {
 			
-			// Teste 
-			Conta c1 = new Conta(20, 1594, 1, "Bruno", 1190.0f);
-			c1.visualizar();
-			c1.sacar(12000.0f);
-			c1.visualizar();
-			c1.depositar(5000.0f);
-			c1.visualizar();
 			
 			// Teste Conta Corrente
 			ContaCorrente cc1 = new ContaCorrente(14, 3652, 1, "Jefferson Melo", 0.0f, 1000.0f);
